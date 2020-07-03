@@ -44,8 +44,8 @@ export class AppComponent {
 
   updateArticle(): void {
     // @ts-ignore
-    this.article.title = document.getElementById('article-title').value;
+    this.article.title = (document.getElementById('article-title') as HTMLInputElement).value;
     // @ts-ignore
-    this.article.url = document.getElementById('article-url').value;
+    this.article.url = (document.getElementById('article-url') as HTMLInputElement).value;
   }
 }
