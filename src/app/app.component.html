@@ -1,21 +1,31 @@
-<!--<app-navbar></app-navbar>-->
+<app-navbar></app-navbar>
 <div class="container-fluid" *ngFor="let article of articles">
   <a href="{{article.url}}" target="_blank">{{article.title}}</a>
+  <a href="#" (change)="getDetail(article.title)">Detail</a>
   <app-likes></app-likes>
 </div>
-<div class="container-fluid">
-  <div class="form-group">
-    <label>Title: </label>
-    <!--<textarea [value]="article.title" cols="70" id="article-title" class="form-control"></textarea>-->
-    <textarea [(ngModel)]="article.title" cols="70" id="article-title" class="form-control"></textarea>
-  </div>
-  <div class="form-group">
-    <label>URL: </label>
-    <!-- <textarea [value]="article.url" cols="70" id="article-url" class="form-control"></textarea>-->
-    <textarea [(ngModel)]="article.url" cols="70" id="article-url" class="form-control"></textarea>
-  </div>
-  <input type="button" value="Add" class="btn btn-primary" (click)="addArticle()">
-<!--  <input type="button" value="Edit" class="btn btn-danger" (click)="updateArticle()">-->
-</div>
-<hr>
+<app-article-detail></app-article-detail>
+<app-article-new></app-article-new>
 <app-footer></app-footer>
+
+<!--&lt;!&ndash;<app-navbar></app-navbar>&ndash;&gt;-->
+<!--<div class="container-fluid" *ngFor="let article of articles">-->
+<!--  <a href="{{article.url}}" target="_blank">{{article.title}}</a>-->
+<!--  <app-likes></app-likes>-->
+<!--</div>-->
+<!--<div class="container-fluid">-->
+<!--  <div class="form-group">-->
+<!--    <label>Title: </label>-->
+<!--    &lt;!&ndash;<textarea [value]="article.title" cols="70" id="article-title" class="form-control"></textarea>&ndash;&gt;-->
+<!--    <textarea [(ngModel)]="article.title" cols="70" id="article-title" class="form-control"></textarea>-->
+<!--  </div>-->
+<!--  <div class="form-group">-->
+<!--    <label>URL: </label>-->
+<!--    &lt;!&ndash; <textarea [value]="article.url" cols="70" id="article-url" class="form-control"></textarea>&ndash;&gt;-->
+<!--    <textarea [(ngModel)]="article.url" cols="70" id="article-url" class="form-control"></textarea>-->
+<!--  </div>-->
+<!--  <input type="button" value="Add" class="btn btn-primary" (click)="addArticle()">-->
+<!--&lt;!&ndash;  <input type="button" value="Edit" class="btn btn-danger" (click)="updateArticle()">&ndash;&gt;-->
+<!--</div>-->
+<!--<hr>-->
+<!--<app-footer></app-footer>-->

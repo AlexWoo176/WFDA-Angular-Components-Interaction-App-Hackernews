@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {IArticle} from './IArticle';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,8 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title = 'hacker-news';
-  article = {
-    title: '',
-    url: ''
-  };
-  articles = [
+  articleTitle = '';
+  articles: IArticle[] = [
     {
       title: 'The Evolution of Async JavaScript: From Callbacks, to Promises, to Async/Await',
       url: 'https://medium.freecodecamp.org/the-evolution-of-async-javascript-from-callbacks-to-promises-to-async-await-e73b047f2f40'
@@ -34,13 +32,17 @@ export class AppComponent {
     }
   ];
 
-  addArticle(): void {
-    // @ts-ignore
-    this.article.title = document.getElementById('article-title').value;
-    // @ts-ignore
-    this.article.url = document.getElementById('article-url').value;
-    this.articles.push(this.article);
+  getDetail(value): void {
+    this.articleTitle = value;
   }
+
+  // addArticle(): void {
+  //   // @ts-ignore
+  //   this.article.title = document.getElementById('article-title').value;
+  //   // @ts-ignore
+  //   this.article.url = document.getElementById('article-url').value;
+  //   this.articles.push(this.article);
+  // }
 
   // updateArticle(): void {
   //   // @ts-ignore

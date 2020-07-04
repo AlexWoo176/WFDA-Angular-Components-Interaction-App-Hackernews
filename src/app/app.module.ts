@@ -7,13 +7,17 @@ import { FooterComponent } from './footer/footer.component';
 import { LikesComponent } from './likes/likes.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {FormsModule} from '@angular/forms';
+import { ArticleNewComponent } from './article-new/article-new.component';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     LikesComponent,
-    NavbarComponent
+    NavbarComponent,
+    ArticleNewComponent,
+    ArticleDetailComponent
   ],
   imports: [
     BrowserModule,
