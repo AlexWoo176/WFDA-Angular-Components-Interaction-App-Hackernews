@@ -42,10 +42,10 @@ export class AppComponent {
     this.articles.push(this.article);
   }
 
-  updateArticle(): void {
-    // @ts-ignore
-    this.article.title = (document.getElementById('article-title') as HTMLInputElement).value;
-    // @ts-ignore
-    this.article.url = (document.getElementById('article-url') as HTMLInputElement).value;
-  }
+  // updateArticle(): void {
+  //   // @ts-ignore
+  //   this.article.title = (document.getElementById('article-title') as HTMLInputElement).value;
+  //   // @ts-ignore
+  //   this.article.url = (document.getElementById('article-url') as HTMLInputElement).value;
+  // }
 }
